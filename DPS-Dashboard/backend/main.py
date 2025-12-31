@@ -10,14 +10,6 @@ from fastapi.responses import StreamingResponse
 
 app = FastAPI()
 
-# Allow CORS for frontend (React)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # adjust for production
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # MySQL connection details
 DB_CONFIG = {
